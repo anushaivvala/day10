@@ -1,0 +1,274 @@
+<!-- 
+    Margin and Padding(Box Model)
+    Float property
+    Position Property
+        Static - appear in the document flow
+        Fixed - positioned relative to the browser window
+        Relative - positioned relative to its normal position
+        Absolute - positioned relative to its first positioned
+        Sticky - positioned based on scroll position
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS-3</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .float-prop {
+            float: left;
+            font-weight: bolder;
+            width: 0.7em;
+            font-size: 80px;
+        }
+
+        .box-model {
+            width: 320px;
+            border: 5px solid gray;
+            margin: 10px;
+            padding: 30px;
+        }
+
+        .box {
+            background-color: yellow;
+            width: 300px;
+            height: 150px;
+            margin: auto;
+            font-size: 40px;
+            text-align: center;
+        }
+ 
+        .box:hover {
+            background-color: orange;
+        }
+
+        .box-act{
+        background-color: yellow;
+        width: 300px;
+        height: 200px;
+        margin: auto;
+        font-size: 40px;
+        text-align: center;
+    }
+ 
+    .box-act:active{
+        background-color: orange;
+    }
+
+    form{
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 2rem;
+        }
+         
+        label{
+            width: 30%;
+        }
+         
+        input{
+            background-color: default;
+            float: right;
+        }
+         
+        input:focus{
+            background-color: grey;
+        }
+
+        a:visited{
+            color: red;
+        }
+
+        .container {
+  display: flex; /* Establishes a flex container */
+  flex-direction: row; /* The main axis runs horizontally (default) */
+  flex-flow: row;
+  flex-wrap: wrap; /* Items wrap to the next line if container width is exceeded */
+  justify-content: space-around; /* Items are evenly distributed with space around them */
+  align-content: center; /* Aligns wrapped lines in the center of the container */
+  height: 200px; /* Setting a height for the container just for visualization */
+}
+
+.item {
+  flex: 1 0 100px;
+  /* 
+     flex-grow: 1; (Each item will grow proportionally to fill available space)
+     flex-shrink: 0; (Each item won't shrink)
+     flex-basis: 100px; (Each item will start with a width of 100px)
+  */
+  background-color: #f1c40f;
+  margin: 10px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.parent {
+  font-family: Arial, sans-serif; /* Font-family property applied to the parent */
+  font-size: 16px; /* Font-size property applied to the parent */
+  color: blue; /* Color property applied to the parent */
+}
+
+.child {
+  font-family: inherit; /* The child element will inherit the font-family from its parent */
+  font-size: inherit; /* The child element will inherit the font-size from its parent */
+  color: inherit; /* The child element will inherit the color from its parent */
+  border: 1px solid black; /* Just to demonstrate that the child has its own border */
+}
+.linear-gradient-example {
+  width: 300px;
+  height: 150px;
+  background: linear-gradient(to right, #ff0000, #00ff00);
+  /* 
+    Creates a linear gradient from left to right, transitioning from red (#ff0000) to green (#00ff00)
+  */
+  color: white;
+  text-align: center;
+  line-height: 150px;
+}
+
+.radial-gradient-example {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #ff0000, #00ff00);
+  /* 
+    Creates a radial gradient that starts with red (#ff0000) at the center and transitions to green (#00ff00) at the edges.
+    'circle' means the gradient will be circular, but you can use other shapes like 'ellipse'.
+  */
+  color: white;
+  text-align: center;
+  line-height: 200px;
+}
+    </style>
+</head>
+
+<body>
+
+<div>
+    <p>A Pseudo class in CSS is used to define the special state of an element. It can be combined with a CSS selector to add an effect to existing elements based on their states. For Example, changing the style of an element when the user hovers over it, or when a link is visited. All of these can be done using Pseudo Classes in CSS.
+
+Note that pseudo-class names are not case-sensitive.
+
+Syntax:  
+
+selector: pseudo-class{
+    property: value;
+}
+
+</p>
+
+ <div class="box">
+        My color changes if you hover over me!
+    </div><br>
+
+    <div class="box-act">
+        My color changes for a moment if you click(Active) me!
+    </div><br>
+
+    <form>
+        <label for="username">:focus - Username:</label>
+        <input type="text" name="username"
+               placeholder="Enter your username" />
+        
+        <label for="emailid">Email-Id:</label>
+        <input type="email" name="emailid"
+               placeholder="Enter your email-id" />
+ 
+        <label for="Password">Password:</label>
+        <input type="password" name="Password"
+               placeholder="Enter your password" />
+    </form>
+
+    
+        <a href="https://www.geeksforgeeks.org/" target="_blank">
+            :Visited - My color changes once you visit this link
+        </a>
+   
+
+</div>
+
+    <div>
+        <h1>Padding & Margin</h1>
+        <div class="box-model">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque rerum facere sequi sunt autem earum,
+            aliquam omnis voluptate reprehenderit incidunt aperiam ipsam magnam alias eos obcaecati impedit rem hic!
+        </div>
+    </div>
+    <br>
+    
+    <hr>
+    <br>
+
+    <h1>The position property</h1>
+
+    <div id="stat-pos">
+        <h2>position: static;</h2>
+        position: static.
+    </div>
+
+
+    <div id="rel-pos">
+        <h2>position: relative;</h2>
+    </div>
+
+
+    <div id="abs-pos">
+        <h3>position: absolute;</h3>
+    </div>
+
+
+    <div id="fixed-pos">
+        <h3>position: fixed;</h3>
+    </div>
+
+    <div id="stick-pos">
+        <h3>i will stick to top</h3>
+    </div>
+    <div class="container">
+        <h2>Flex - display, direction, wrap, flex-flow, justify-content, align-content</h2>
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+</div>
+<div>
+<h2>parent inherit</h2>
+    <p>Parent inheritance is a feature of CSS that allows the properties of a parent element to be inherited by its child elements. This means that if you set a property on a parent element, the child elements will inherit that property unless you explicitly override it.
+For example, if you set the font-size property on a parent element to 16px, all of the child elements will also have a font size of 16px unless you explicitly set a different font size for the child elements.</p>
+
+<div class="parent">
+  <p class="child">This is the child element.</p>
+</div>
+
+</div>
+
+    <div style="padding-bottom: 20%;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, officiis neque culpa dolorem repudiandae non
+        debitis distinctio minus unde ea ex est architecto incidunt corrupti tenetur in blanditiis omnis fuga! Lorem
+        ipsum dolor sit amet consectetur adipisicing
+        elit. Repellat omnis unde, vitae aspernatur, eos facilis, voluptas sint magni sunt consequuntur modi? Esse neque
+        voluptatum minima voluptatem dolorem perspiciatis voluptas voluptatibus.
+    </div>
+
+    <div>
+        
+        <h2>gradient</h2>
+        <p>CSS gradients allow you to create smooth color transitions for backgrounds, borders, and other elements. There are two types of gradients: linear gradients and radial gradients. Here's an example of each</p>
+
+        <div class="linear-gradient-example">
+  Linear Gradient Example
+</div>
+<br>
+<div class="radial-gradient-example">
+  Radial Gradient Example
+</div>
+
+    </div>
+</body>
+
+</html>
